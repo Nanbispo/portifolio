@@ -1,0 +1,12 @@
+.tecnologs{
+    display: flex;
+    justify-content: center;  
+}
+
+.tec{
+    width: 100px;
+    margin: 40px;
+    background-color: rgb(218, 238, 255);
+    border-radius: 60%;
+    
+}

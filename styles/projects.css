@@ -1,0 +1,50 @@
+.projetos{
+    display: inline-block;
+    padding-left: 10%;
+    padding-bottom: 160px;
+    font-family: "Nunito";
+ }
+ 
+ .card {
+     border: 1px solid #ccc;
+     border-radius: 8px;
+     overflow: hidden;
+     width: 18.75em;
+     margin: 10px;
+ }
+ 
+ .card img {
+     width: 100%;
+     height: auto;
+ }
+ 
+ .card-content {
+     padding: 10px;
+ }
+ 
+ .card-content h3 {
+     margin-top: 0;
+ }
+ 
+ .card-content a {
+     margin: 30px;
+     text-align: center;
+     text-decoration: none;
+     background-color: #000000;
+     color: #ffffff;
+     padding: 5px 10px;
+     border-radius: 5px;
+ }
+ 
+ .card-content a:hover {
+     background-color: #fff;
+     color: #000000;
+     border: #000000;
+     border-radius: 2px;
+     border: solid;
+     border-radius: 40px;
+     transition: 1s;
+ }
+ 
+ 
+ 
