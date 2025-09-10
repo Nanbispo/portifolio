@@ -1,12 +1,78 @@
 .tecnologs{
-    display: flex;
-    justify-content: center;  
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .tec{
-    width: 100px;
-    margin: 40px;
-    background-color: rgb(218, 238, 255);
-    border-radius: 60%;
-    
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #000000 0%, #1a237e 100%);
+    border-radius: 20px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tec::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border-radius: 20px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.tec img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.tec:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.tec:hover img {
+    transform: scale(1.1);
+}
+
+.tech-name {
+    font-family: "Nunito", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1a237e;
+    text-align: center;
+    margin-top: 0.5rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.tech-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.tech-card:hover .tech-name {
+    color: #000000;
+    transform: translateY(-2px);
 }
