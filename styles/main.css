@@ -126,3 +126,48 @@ h4{
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     color: #1a237e;
 }
+
+/* Responsividade para telas menores */
+@media (max-width: 900px) {
+    .main {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+        max-width: 95vw;
+    }
+    .fotoPrincipal {
+        max-width: 250px;
+        padding: 15px;
+    }
+    .main-cabeca {
+        align-items: center;
+        text-align: center;
+    }
+    .descricao {
+        max-width: 90vw;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .main {
+        padding: 1rem 0.5rem;
+        border-radius: 20px;
+        margin: 1rem auto;
+    }
+    .apresentacao {
+        font-size: 1.5rem;
+    }
+    .descricao {
+        font-size: 1rem;
+    }
+    .fotoPrincipal {
+        max-width: 150px;
+        padding: 8px;
+    }
+    .RedesSociais {
+        width: 2.2rem;
+        height: 2.2rem;
+        font-size: 1.2rem;
+    }
+}
