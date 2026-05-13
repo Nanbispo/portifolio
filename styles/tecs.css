@@ -1,11 +1,32 @@
 .tecnologs {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 2rem;
-    justify-items: center;
-    max-width: 800px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: clamp(1rem, 2.2vw, 1.75rem);
+    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0.25rem clamp(1rem, 3vw, 2rem) 0.75rem;
+    box-sizing: border-box;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(12, 24, 40, 0.25) transparent;
+}
+
+.tecnologs::-webkit-scrollbar {
+    height: 7px;
+}
+
+.tecnologs::-webkit-scrollbar-thumb {
+    background: rgba(12, 24, 40, 0.22);
+    border-radius: 999px;
+}
+
+.tecnologs::-webkit-scrollbar-track {
+    background: transparent;
 }
 
 .tec {
@@ -80,6 +101,7 @@
     align-items: center;
     text-decoration: none;
     transition: transform 0.3s ease;
+    flex: 0 0 auto;
 }
 
 .tech-card:hover .tech-name {
