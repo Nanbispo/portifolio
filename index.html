@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/experiencias.css">
     <link rel="stylesheet" href="styles/projects.css">
     <link rel="stylesheet" href="styles/tecs.css">
+    <link rel="stylesheet" href="styles/contact.css">
 
     <title>Renan</title>
 </head>
@@ -29,6 +30,7 @@
                 <li><a href="#experiencias">Experiências</a></li>
                 <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#tecnologias">Tecnologias</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -234,6 +236,36 @@
             </a>
         </div>
     </section>
+
+    <section id="contato" class="contato-section" aria-labelledby="titulo-contato">
+        <h2 id="titulo-contato" class="about">Contato</h2>
+        <p class="contato-lead">Envie uma mensagem; o e-mail será aberto no seu aplicativo padrão com os dados preenchidos.</p>
+        <div class="formulario-rodape">
+            <div id="form-contato-aviso" class="form-aviso" hidden></div>
+            <form id="form-contato" action="#" method="get" novalidate>
+                <div class="grupo-input">
+                    <label for="contato-nome">Nome completo</label>
+                    <input type="text" id="contato-nome" name="nome" autocomplete="name" placeholder="Seu nome">
+                </div>
+                <div class="grupo-input">
+                    <label for="contato-email">E-mail</label>
+                    <input type="email" id="contato-email" name="email" autocomplete="email" inputmode="email" placeholder="seu@email.com">
+                </div>
+                <div class="grupo-input">
+                    <label for="contato-telefone">Telefone</label>
+                    <input type="tel" id="contato-telefone" name="telefone" autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000">
+                </div>
+                <div class="grupo-input">
+                    <label for="contato-mensagem">Mensagem</label>
+                    <textarea id="contato-mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem"></textarea>
+                </div>
+                <button type="submit">Enviar mensagem</button>
+            </form>
+        </div>
+        <p class="contato-nota">O envio usa o recurso <strong>mailto</strong> do navegador (não há servidor no site). É necessário ter um app de e-mail configurado no dispositivo.</p>
+    </section>
+
+    <script src="scripts/contact-form.js" defer></script>
 </body>
 
 </html>

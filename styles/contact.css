@@ -1,0 +1,137 @@
+.contato-section {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2.5rem clamp(1.25rem, 4vw, 2rem) 4rem;
+}
+
+.contato-section .about {
+    margin-bottom: 0.75rem;
+}
+
+.contato-lead {
+    margin: 0 0 1.5rem;
+    font-family: "Nunito", sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-soft, #3d4a55);
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+.formulario-rodape {
+    border: 1px solid var(--edge, rgba(12, 24, 40, 0.1));
+    border-radius: 16px;
+    padding: clamp(1.35rem, 3vw, 2rem);
+    background: var(--surface, #f4f8fb);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.95) inset,
+        0 12px 32px rgba(12, 22, 35, 0.08);
+}
+
+.formulario-rodape form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.grupo-input label {
+    font-family: "Nunito", sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--text, #0c0f12);
+}
+
+.grupo-input input,
+.grupo-input textarea {
+    font-family: "Nunito", sans-serif;
+    font-size: 1rem;
+    padding: 0.65rem 0.85rem;
+    border-radius: 10px;
+    border: 1px solid rgba(12, 24, 40, 0.12);
+    background: #fff;
+    color: var(--text, #0c0f12);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.grupo-input input::placeholder,
+.grupo-input textarea::placeholder {
+    color: rgba(36, 48, 56, 0.45);
+}
+
+.grupo-input input:focus,
+.grupo-input textarea:focus {
+    outline: none;
+    border-color: rgba(12, 24, 40, 0.28);
+    box-shadow: 0 0 0 3px rgba(12, 22, 35, 0.06);
+}
+
+.grupo-input input.input-erro,
+.grupo-input textarea.input-erro {
+    border-color: #b3261e;
+    box-shadow: 0 0 0 3px rgba(179, 38, 30, 0.12);
+}
+
+.formulario-rodape button[type="submit"] {
+    align-self: flex-start;
+    margin-top: 0.25rem;
+    font-family: "Nunito", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 0.65rem 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(12, 24, 40, 0.2);
+    background: var(--text, #0c0f12);
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.formulario-rodape button[type="submit"]:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(12, 22, 35, 0.18);
+}
+
+.formulario-rodape button[type="submit"]:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.form-aviso {
+    font-family: "Nunito", sans-serif;
+    font-size: 0.88rem;
+    line-height: 1.45;
+    padding: 0.65rem 0.85rem;
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+
+.form-aviso--erro {
+    color: #5c1510;
+    background: rgba(179, 38, 30, 0.08);
+    border-color: rgba(179, 38, 30, 0.25);
+}
+
+.form-aviso--info {
+    color: var(--text-muted, #243038);
+    background: rgba(255, 255, 255, 0.75);
+    border-color: var(--edge, rgba(12, 24, 40, 0.1));
+}
+
+.contato-nota {
+    margin: 1rem 0 0;
+    font-family: "Nunito", sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--text-soft, #3d4a55);
+    text-align: center;
+}
