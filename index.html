@@ -39,8 +39,10 @@
             <p class="descricao">Desenvolvedor Back-end</p>
             <div class="social-links">
                 <a href="https://github.com/Nanbispo"><img class="RedesSociais" src="imgs/github.svg" alt="GitHub"></a>
-                <a href="https://www.linkedin.com/in/renan-bispo/"><img class="RedesSociais" src="imgs/linkedin.svg" alt="LinkedIn"></a>
-                <a href="https://www.instagram.com/nanbispo_/"><img class="RedesSociais" src="imgs/instagram.svg" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/in/renan-bispo/"><img class="RedesSociais" src="imgs/linkedin.svg"
+                        alt="LinkedIn"></a>
+                <a href="https://www.instagram.com/nanbispo_/"><img class="RedesSociais" src="imgs/instagram.svg"
+                        alt="Instagram"></a>
             </div>
         </header>
         <div class="main-visual">
@@ -52,9 +54,16 @@
         <header>
             <h2 id="titulo-sobre" class="about">Sobre mim</h2>
             <div class="sobre-mim">
-                <p>Sou desenvolvedor back-end com experiência em Go, Java e PostgreSQL, atuando na construção de APIs escaláveis, seguras e de fácil manutenção. Tenho foco em desenvolver soluções performáticas, estruturando consultas otimizadas e arquiteturas flexíveis que contribuem para aplicações mais eficientes e sustentáveis. <br>
+                <p>Sou desenvolvedor back-end com experiência em Go, Java e PostgreSQL, atuando na construção de APIs
+                    escaláveis, seguras e de fácil manutenção. Tenho foco em desenvolver soluções performáticas,
+                    estruturando consultas otimizadas e arquiteturas flexíveis que contribuem para aplicações mais
+                    eficientes e sustentáveis. <br>
 
-                    <br>Também possuo conhecimentos em Docker, versionamento de código com Git e desenvolvimento em ADVPL, o que amplia minha capacidade de atuar tanto em sistemas legados quanto em projetos modernos. Busco constantemente evoluir tecnicamente, aplicando boas práticas de desenvolvimento, organização de código e melhoria contínua em cada projeto.</p>
+                    <br>Também possuo conhecimentos em Docker, versionamento de código com Git e desenvolvimento em
+                    ADVPL, o que amplia minha capacidade de atuar tanto em sistemas legados quanto em projetos modernos.
+                    Busco constantemente evoluir tecnicamente, aplicando boas práticas de desenvolvimento, organização
+                    de código e melhoria contínua em cada projeto.
+                </p>
             </div>
         </header>
     </section>
@@ -66,14 +75,18 @@
                 <span class="timeline-date">2023</span>
                 <div class="timeline-content">
                     <h3>Início na programação</h3>
-                    <p>Primeiro contato com desenvolvimento de software, estudando lógica, fundamentos da web e boas práticas de código. Foco em entender como sistemas se comunicam e em construir uma base sólida para evoluir na área.</p>
-                
+                    <p>Primeiro contato com desenvolvimento de software, estudando lógica, fundamentos da web e boas
+                        práticas de código. Foco em entender como sistemas se comunicam e em construir uma base sólida
+                        para evoluir na área.</p>
+
             </li>
             <li class="timeline-item">
                 <span class="timeline-date">Atual</span>
                 <div class="timeline-content">
                     <h3>Grupo Vitalmed - Estagiário de suporte e desenvolvimento</h3>
-                    <p>Atuo como estagiário de suporte e desenvolvimento na empresa Grupo Vitalmed, onde realizo suporte técnico aos usuários e desenvolvo soluções para problemas de software. Também realizo manutenção de sistemas legados e desenvolvo novas funcionalidades para os sistemas.</p>
+                    <p>Atuo como estagiário de suporte e desenvolvimento na empresa Grupo Vitalmed, onde realizo suporte
+                        técnico aos usuários e desenvolvo soluções para problemas de software. Também realizo manutenção
+                        de sistemas legados e desenvolvo novas funcionalidades para os sistemas.</p>
                 </div>
             </li>
         </ol>
@@ -82,31 +95,93 @@
     <section id="projetos" class="projetos-section" aria-labelledby="titulo-projetos">
         <h2 id="titulo-projetos" class="about">Projetos</h2>
         <div class="projects-container">
-            <article class="card">
-                <img src="projects/Clean-code.jpg" alt="Projeto AluGames">
-                <div class="card-content">
-                    <h3>AluGames</h3>
-                    <p>Projeto desenvolvido para treinar habilidades simples em back-end com Kotlin e Maven.</p>
-                    <a href="link-para-o-projeto">Projeto</a>
-                    <a href="https://github.com/Nanbispo/AluGames">Código</a>
+            <article class="project-card">
+                <div class="project-card__media">
+                    <img class="project-card__thumb" src="projects/Clean-code.jpg" alt="">
+                </div>
+                <div class="project-card__body">
+                    <h3 class="project-card__title">Forum</h3>
+                    <p class="project-card__desc">Sistema de gerenciamento colaborativo voltado para a criação,
+                        organização e interação em discussões entre usuários, permitindo o cadastro de tópicos, envio de
+                        dúvidas, compartilhamento de respostas e acompanhamento das interações em um ambiente
+                        estruturado e intuitivo.</p>
+                    <ul class="project-card__stack" aria-label="Tecnologias utilizadas">
+                        <img class="project-tech-icon" src="tecs/Kotlin.svg" alt="" width="24" height="24"
+                            decoding="async" aria-hidden="true">
+                        <img class="project-tech-icon" src="tecs/Spring.svg" alt="" width="24" height="24"
+                            decoding="async" aria-hidden="true">
+                        <img class="project-tech-icon" src="tecs/Apache Maven.svg" alt="" width="24" height="24"
+                            decoding="async" aria-hidden="true">
+                        <img class="project-tech-icon" src="tecs/Postman.svg" alt="" width="24" height="24"
+                            decoding="async" aria-hidden="true">
+                        </li>
+                    </ul>
+                    <div class="project-card__actions">
+                        <a class="project-card__btn project-card__btn--ghost"
+                            href="https://github.com/Nanbispo/forum">Ver projeto</a>
+                        <a class="project-card__btn project-card__btn--primary" href="https://github.com/Nanbispo/forum"
+                            target="_blank" rel="noopener noreferrer">Código</a>
+                    </div>
                 </div>
             </article>
-            <article class="card">
-                <img src="projects/Clean-code.jpg" alt="Projeto ScreenMatch">
-                <div class="card-content">
-                    <h3>ScreenMatch</h3>
-                    <p>Projeto desenvolvido para treinar habilidades simples em back-end com Java e Maven.</p>
-                    <a href="link-para-o-projeto">Projeto</a>
-                    <a href="https://github.com/Nanbispo/ScreenMatch.git">Código</a>
+            <article class="project-card">
+                <div class="project-card__media">
+                    <img class="project-card__thumb" src="projects/Clean-code.jpg" alt="Visual do projeto ScreenMatch">
+                </div>
+                <div class="project-card__body">
+                    <h3 class="project-card__title">Produto Go</h3>
+                    <p class="project-card__desc">API em Go para gerenciamento de produtos, permitindo o cadastro,
+                        edição, exclusão e busca de produtos.</p>
+                    <ul class="project-card__stack" aria-label="Tecnologias utilizadas">
+
+                        <img class="project-tech-icon" src="tecs/Go.svg" alt="" width="24" height="24"
+                                decoding="async" aria-hidden="true">
+                        <img class="project-tech-icon" src="tecs/PostgresSQL.svg" alt="" width="24" height="24"
+                                decoding="async" aria-hidden="true">
+                        <img class="project-tech-icon" src="tecs/Docker.svg" alt="" width="24" height="24">
+                        <img class="project-tech-icon" src="tecs/Postman.svg" alt="" width="24" height="24">
+                        <img class="project-tech-icon" src="tecs/Git.svg" alt="" width="24" height="24"
+                                decoding="async" aria-hidden="true">
+                            
+                        </li>
+                    </ul>
+                    <div class="project-card__actions">
+                        <a class="project-card__btn project-card__btn--ghost" href="https://github.com/Nanbispo/api-produto">Ver projeto</a>
+                        <a class="project-card__btn project-card__btn--primary"
+                            href="https://github.com/Nanbispo/api-produto" target="_blank"
+                            rel="noopener noreferrer">Código</a>
+                    </div>
                 </div>
             </article>
-            <article class="card">
-                <img src="projects/Clean-code.jpg" alt="Projeto Forum">
-                <div class="card-content">
-                    <h3>Forum</h3>
-                    <p>CRUD desenvolvido em Kotlin e Spring para registro de dúvidas e respostas.</p>
-                    <a href="link-para-o-projeto">Projeto</a>
-                    <a href="https://github.com/Nanbispo/forum">Código</a>
+            <article class="project-card">
+                <div class="project-card__media">
+                    <img class="project-card__thumb" src="projects/Clean-code.jpg" alt="Visual do projeto Forum">
+                </div>
+                <div class="project-card__body">
+                    <h3 class="project-card__title">Lume</h3>
+                    <p class="project-card__desc">O Lume é um site moderno e responsivo desenvolvida para uma plataforma de pedidos de café. O projeto foca em uma estética minimalista, utilizando tons terrosos e uma tipografia limpa para proporcionar uma experiência de usuário acolhedora e funcional.</p>
+                    <ul class="project-card__stack" aria-label="Tecnologias utilizadas">
+                    
+                        <li class="project-card__stack-item" title="Git">
+                            <img class="project-tech-icon" src="tecs/html.svg" alt="" width="24" height="24"
+                                decoding="async" aria-hidden="true">
+                            <img class="project-tech-icon" src="tecs/css.svg" alt="" width="24" height="24"
+                                decoding="async" aria-hidden="true">
+                            <img class="project-tech-icon" src="tecs/JavaScript.svg" alt="" width="24" height="24"
+                                decoding="async" aria-hidden="true">
+                            <img class="project-tech-icon" src="tecs/Go.svg" alt="" width="24" height="24"
+                                decoding="async" aria-hidden="true">
+                            <img class="project-tech-icon" src="tecs/PostgresSQL.svg" alt="" width="24" height="24"
+                                decoding="async" aria-hidden="true">
+                            <img class="project-tech-icon" src="tecs/Git.svg" alt="" width="24" height="24"
+                                decoding="async" aria-hidden="true">
+                        </li>
+                    </ul>
+                    <div class="project-card__actions">
+                        <a class="project-card__btn project-card__btn--ghost" href="link-para-o-projeto">Ver projeto</a>
+                        <a class="project-card__btn project-card__btn--primary" href="https://github.com/renanbispo-dotcom/Lume"
+                            target="_blank" rel="noopener noreferrer">Código</a>
+                    </div>
                 </div>
             </article>
         </div>
