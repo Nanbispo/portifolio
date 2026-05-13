@@ -1,4 +1,4 @@
-.tecnologs{
+.tecnologs {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 2rem;
@@ -8,14 +8,17 @@
     padding: 0 2rem;
 }
 
-.tec{
+.tec {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, #000000 0%, #1a237e 100%);
+    background: linear-gradient(160deg, #f8fbfd 0%, #e4ecf4 100%);
     border-radius: 20px;
     padding: 1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.95) inset,
+        0 10px 24px rgba(12, 22, 35, 0.1);
+    border: 1px solid var(--edge, rgba(12, 24, 40, 0.08));
     position: relative;
     overflow: hidden;
     display: flex;
@@ -24,13 +27,17 @@
 }
 
 .tec::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    background: linear-gradient(
+        165deg,
+        rgba(255, 255, 255, 0.75) 0%,
+        rgba(255, 255, 255, 0) 55%
+    );
     border-radius: 20px;
     pointer-events: none;
     z-index: 1;
@@ -42,12 +49,15 @@
     object-fit: contain;
     position: relative;
     z-index: 2;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .tec:hover {
     transform: translateY(-8px) scale(1.05);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 1) inset,
+        0 18px 40px rgba(12, 22, 35, 0.14);
+    border-color: rgba(12, 24, 40, 0.12);
 }
 
 .tec:hover img {
@@ -57,11 +67,11 @@
 .tech-name {
     font-family: "Nunito", sans-serif;
     font-size: 0.9rem;
-    font-weight: 600;
-    color: #1a237e;
+    font-weight: 700;
+    color: var(--text, #0c0f12);
     text-align: center;
     margin-top: 0.5rem;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    text-shadow: var(--text-depth, 0 1px 0 rgba(255, 255, 255, 0.88), 0 2px 14px rgba(12, 22, 35, 0.07));
 }
 
 .tech-card {
@@ -69,10 +79,10 @@
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .tech-card:hover .tech-name {
-    color: #000000;
+    color: var(--text, #0c0f12);
     transform: translateY(-2px);
 }

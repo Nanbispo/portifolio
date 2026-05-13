@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -11,44 +11,109 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/about.css">
-    <link rel="stylesheet" href="styles/tecs.css">
+    <link rel="stylesheet" href="styles/experiencias.css">
     <link rel="stylesheet" href="styles/projects.css">
+    <link rel="stylesheet" href="styles/tecs.css">
 
     <title>Renan</title>
 </head>
 
 <body>
-    <footer class="main">
-        <img class="fotoPrincipal" src="imgs/renan-preaia.jpeg" alt="">
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Navegação principal">
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre-mim">Sobre mim</a></li>
+                <li><a href="#experiencias">Experiências</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#tecnologias">Tecnologias</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="main" aria-label="Início">
         <header class="main-cabeca">
-            <h1 class="apresentacao">Olá! Me chamo Renan</h1>
-            <p class="descricao">Sou estudante de desenvolvimento Mobile</p>
-            <h4>Conheça minhas redes sociais:</h4>
+            <h1 class="apresentacao">Renan Bispo</h1>
+            <p class="descricao">Desenvolvedor Back-end</p>
             <div class="social-links">
                 <a href="https://github.com/Nanbispo"><img class="RedesSociais" src="imgs/github.svg" alt="GitHub"></a>
-                <a href="https://www.linkedin.com/in/renan-de-jesus-bispo-78a576243/"><img class="RedesSociais" src="imgs/linkedin.svg" alt="LinkedIn"></a>
+                <a href="https://www.linkedin.com/in/renan-bispo/"><img class="RedesSociais" src="imgs/linkedin.svg" alt="LinkedIn"></a>
                 <a href="https://www.instagram.com/nanbispo_/"><img class="RedesSociais" src="imgs/instagram.svg" alt="Instagram"></a>
             </div>
         </header>
-    </footer>
+        <div class="main-visual">
+            <img class="main-illustration" src="imgs/file.svg" alt="" width="360" height="360" decoding="async">
+        </div>
+    </section>
 
-    <footer class="principal-about">
+    <section id="sobre-mim" class="principal-about" aria-labelledby="titulo-sobre">
         <header>
-            <h1 class="about">Sobre mim:</h1>
+            <h2 id="titulo-sobre" class="about">Sobre mim</h2>
             <div class="sobre-mim">
-                <p>Olá! Me chamo Renan Bispo e tenho 20 anos. Sou um estudante,
-                atualmente focado no desenvolvimento de aplicações Mobile utilizando Kotlin.
-                Resido na cidade de Salvador, onde há muita inspiração cultural.
-                Conheci a área de desenvolvimento em meados de 2023 e me identifiquei com a área, por ser curioso,
-                e também por ser uma pessoa que gosta de inovações, principalmente tecnológicas.</p>
+                <p>Sou desenvolvedor back-end com experiência em Go, Java e PostgreSQL, atuando na construção de APIs escaláveis, seguras e de fácil manutenção. Tenho foco em desenvolver soluções performáticas, estruturando consultas otimizadas e arquiteturas flexíveis que contribuem para aplicações mais eficientes e sustentáveis. <br>
+
+                    <br>Também possuo conhecimentos em Docker, versionamento de código com Git e desenvolvimento em ADVPL, o que amplia minha capacidade de atuar tanto em sistemas legados quanto em projetos modernos. Busco constantemente evoluir tecnicamente, aplicando boas práticas de desenvolvimento, organização de código e melhoria contínua em cada projeto.</p>
             </div>
         </header>
-    </footer>
+    </section>
 
+    <section id="experiencias" class="experiencias-section" aria-labelledby="titulo-experiencias">
+        <h2 id="titulo-experiencias" class="about">Experiências</h2>
+        <ol class="timeline">
+            <li class="timeline-item">
+                <span class="timeline-date">2023</span>
+                <div class="timeline-content">
+                    <h3>Início na programação</h3>
+                    <p>Primeiro contato com desenvolvimento de software, estudando lógica, fundamentos da web e boas práticas de código. Foco em entender como sistemas se comunicam e em construir uma base sólida para evoluir na área.</p>
+                
+            </li>
+            <li class="timeline-item">
+                <span class="timeline-date">Atual</span>
+                <div class="timeline-content">
+                    <h3>Grupo Vitalmed - Estagiário de suporte e desenvolvimento</h3>
+                    <p>Atuo como estagiário de suporte e desenvolvimento na empresa Grupo Vitalmed, onde realizo suporte técnico aos usuários e desenvolvo soluções para problemas de software. Também realizo manutenção de sistemas legados e desenvolvo novas funcionalidades para os sistemas.</p>
+                </div>
+            </li>
+        </ol>
+    </section>
 
-    <footer>
-        <h1 class="about">Tecnologias</h1>
+    <section id="projetos" class="projetos-section" aria-labelledby="titulo-projetos">
+        <h2 id="titulo-projetos" class="about">Projetos</h2>
+        <div class="projects-container">
+            <article class="card">
+                <img src="projects/Clean-code.jpg" alt="Projeto AluGames">
+                <div class="card-content">
+                    <h3>AluGames</h3>
+                    <p>Projeto desenvolvido para treinar habilidades simples em back-end com Kotlin e Maven.</p>
+                    <a href="link-para-o-projeto">Projeto</a>
+                    <a href="https://github.com/Nanbispo/AluGames">Código</a>
+                </div>
+            </article>
+            <article class="card">
+                <img src="projects/Clean-code.jpg" alt="Projeto ScreenMatch">
+                <div class="card-content">
+                    <h3>ScreenMatch</h3>
+                    <p>Projeto desenvolvido para treinar habilidades simples em back-end com Java e Maven.</p>
+                    <a href="link-para-o-projeto">Projeto</a>
+                    <a href="https://github.com/Nanbispo/ScreenMatch.git">Código</a>
+                </div>
+            </article>
+            <article class="card">
+                <img src="projects/Clean-code.jpg" alt="Projeto Forum">
+                <div class="card-content">
+                    <h3>Forum</h3>
+                    <p>CRUD desenvolvido em Kotlin e Spring para registro de dúvidas e respostas.</p>
+                    <a href="link-para-o-projeto">Projeto</a>
+                    <a href="https://github.com/Nanbispo/forum">Código</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="tecnologias" class="tecnologias-section" aria-labelledby="titulo-tecnologias">
+        <h2 id="titulo-tecnologias" class="about">Tecnologias</h2>
         <div class="tecnologs">
             <a href="https://www.w3schools.com/html/" class="tech-card">
                 <div class="tec">
@@ -68,52 +133,32 @@
                 </div>
                 <span class="tech-name">JavaScript</span>
             </a>
-            <a href="https://kotlinlang.org/" class="tech-card">
+            <a href="" class="tech-card">
                 <div class="tec">
-                    <img src="tecs/kotlin.svg" alt="Kotlin">
+                    <img src="tecs/Go.svg" alt="Go">
                 </div>
-                <span class="tech-name">Kotlin</span>
+                <span class="tech-name">Golang</span>
             </a>
-            <a href="https://start.spring.io/" class="tech-card">
+            <a href="" class="tech-card">
                 <div class="tec">
-                    <img src="tecs/icons8-spring-boot.svg" alt="Spring Boot">
+                    <img src="tecs/PostgresSQL.svg" alt="PostgreSQL">
                 </div>
-                <span class="tech-name">Spring Boot</span>
+                <span class="tech-name">PostgreSQL</span>
+            </a>
+            <a href="" class="tech-card">
+                <div class="tec">
+                    <img src="tecs/Git.svg" alt="Git">
+                </div>
+                <span class="tech-name">Git</span>
+            </a>
+            <a href="" class="tech-card">
+                <div class="tec">
+                    <img src="tecs/Docker.svg" alt="Docker">
+                </div>
+                <span class="tech-name">Docker</span>
             </a>
         </div>
-    </footer>
-    <h1 class="about">Projetos:</h1>
-    <footer>
-        <div class="projects-container">
-            <div class="card">
-                <img src="projects/Clean-code.jpg" alt="Projeto AluGames">
-                <div class="card-content">
-                    <h3>AluGames</h3>
-                    <p>Projeto desenvolvido para treinar habilidades simples em back-end com Kotlin e Maven.</p>
-                    <a href="link-para-o-projeto">Projeto</a>
-                    <a href="https://github.com/Nanbispo/AluGames">Código</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="projects/Clean-code.jpg" alt="Projeto ScreenMatch">
-                <div class="card-content">
-                    <h3>ScreenMatch</h3>
-                    <p>Projeto desenvolvido para treinar habilidades simples em back-end com Java e Maven.</p>
-                    <a href="link-para-o-projeto">Projeto</a>
-                    <a href="https://github.com/Nanbispo/ScreenMatch.git">Código</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="projects/Clean-code.jpg" alt="Projeto Forum">
-                <div class="card-content">
-                    <h3>Forum</h3>
-                    <p>CRUD desenvolvido em Kotlin e Spring para registro de dúvidas e respostas.</p>
-                    <a href="link-para-o-projeto">Projeto</a>
-                    <a href="https://github.com/Nanbispo/forum">Código</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    </section>
 </body>
 
 </html>

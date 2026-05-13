@@ -1,4 +1,4 @@
-.projetos{
+.projetos {
     display: flex;
     justify-content: center;
     margin: 2rem 0;
@@ -16,24 +16,30 @@
 }
 
 .card {
-    border: none;
+    border: 1px solid var(--edge, rgba(12, 24, 40, 0.08));
     border-radius: 20px;
     overflow: hidden;
     width: 320px;
-    background: linear-gradient(135deg, #000000 0%, #1a237e 100%);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-    transition: all 0.3s ease;
+    background: var(--surface, #f4f8fb);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.95) inset,
+        0 14px 34px rgba(12, 22, 35, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
 }
 
 .card::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    background: linear-gradient(
+        165deg,
+        rgba(255, 255, 255, 0.65) 0%,
+        rgba(255, 255, 255, 0) 50%
+    );
     border-radius: 20px;
     pointer-events: none;
     z-index: 1;
@@ -44,31 +50,31 @@
     height: 200px;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .card-content {
     padding: 1.5rem;
     position: relative;
     z-index: 2;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(8px);
 }
 
 .card-content h3 {
     margin: 0 0 1rem 0;
     font-size: 1.3rem;
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.95);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    font-weight: 800;
+    color: var(--text, #0c0f12);
+    text-shadow: var(--text-depth, 0 1px 0 rgba(255, 255, 255, 0.88), 0 2px 14px rgba(12, 22, 35, 0.07));
 }
 
 .card-content p {
     margin: 0 0 1.5rem 0;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-soft, #3d4a55);
     line-height: 1.6;
     font-size: 0.95rem;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 .card-content a {
@@ -76,26 +82,30 @@
     margin: 0.5rem 0.5rem 0 0;
     text-align: center;
     text-decoration: none;
-    background: rgba(255, 255, 255, 0.2);
-    color: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.85);
+    color: var(--text, #0c0f12);
     padding: 0.5rem 1rem;
     border-radius: 25px;
     font-size: 0.9rem;
     font-weight: 600;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 1px solid var(--edge, rgba(12, 24, 40, 0.1));
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9) inset;
 }
 
 .card-content a:hover {
-    background: rgba(255, 255, 255, 0.9);
-    color: #1a237e;
+    background: #ffffff;
+    color: var(--text, #0c0f12);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(12, 22, 35, 0.12);
+    border-color: rgba(12, 24, 40, 0.14);
 }
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 1) inset,
+        0 22px 48px rgba(12, 22, 35, 0.14);
 }
 
 .card:hover img {
