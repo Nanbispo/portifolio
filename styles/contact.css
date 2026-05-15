@@ -127,6 +127,12 @@
     border-color: var(--edge, rgba(12, 24, 40, 0.1));
 }
 
+.form-aviso--sucesso {
+    color: #164b2f;
+    background: rgba(34, 139, 82, 0.1);
+    border-color: rgba(34, 139, 82, 0.28);
+}
+
 .contato-nota {
     margin: 1rem 0 0;
     font-family: "Nunito", sans-serif;

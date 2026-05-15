@@ -2,7 +2,6 @@
     "use strict";
 
     var DESTINO = "contato.renanjesusbispo@gmail.com";
-
     var form = document.getElementById("form-contato");
     if (!form) return;
 
@@ -10,6 +9,8 @@
     var email = document.getElementById("contato-email");
     var telefone = document.getElementById("contato-telefone");
     var mensagem = document.getElementById("contato-mensagem");
+    var replyTo = document.getElementById("contato-replyto");
+    var subject = document.getElementById("contato-subject");
     var aviso = document.getElementById("form-contato-aviso");
     var submitBtn = form.querySelector('button[type="submit"]');
 
@@ -31,14 +32,6 @@
         aviso.className = "form-aviso form-aviso--erro";
         aviso.hidden = false;
         aviso.setAttribute("role", "alert");
-    }
-
-    function mostrarInfo(texto) {
-        if (!aviso) return;
-        aviso.textContent = texto;
-        aviso.className = "form-aviso form-aviso--info";
-        aviso.hidden = false;
-        aviso.setAttribute("role", "status");
     }
 
     function validarEmail(valor) {
@@ -70,7 +63,7 @@
             return false;
         }
         if (!validarEmail(e)) {
-            mostrarErro("Digite um e-mail válido.");
+            mostrarErro("Digite um e-mail valido.");
             email.classList.add("input-erro");
             email.focus();
             return false;
@@ -82,7 +75,7 @@
             return false;
         }
         if (digitosTelefone(t).length < 10) {
-            mostrarErro("O telefone deve ter pelo menos 10 dígitos.");
+            mostrarErro("O telefone deve ter pelo menos 10 digitos.");
             telefone.classList.add("input-erro");
             telefone.focus();
             return false;
@@ -97,54 +90,18 @@
         return true;
     }
 
-    function montarCorpo(n, e, t, m) {
-        return (
-            "Nome: " +
-            n +
-            "\r\n" +
-            "E-mail: " +
-            e +
-            "\r\n" +
-            "Telefone: " +
-            t +
-            "\r\n\r\n" +
-            "Mensagem:\r\n" +
-            m
-        );
-    }
-
     form.addEventListener("submit", function (ev) {
-        ev.preventDefault();
-        if (!validar()) return;
+        if (!validar()) {
+            ev.preventDefault();
+            return;
+        }
 
         var n = nome.value.trim();
         var e = email.value.trim();
-        var t = telefone.value.trim();
-        var m = mensagem.value.trim();
 
-        var assunto = "Contato pelo portfólio — " + n;
-        var corpo = montarCorpo(n, e, t, m);
-
-        var href =
-            "mailto:" +
-            DESTINO +
-            "?subject=" +
-            encodeURIComponent(assunto) +
-            "&body=" +
-            encodeURIComponent(corpo);
-
+        if (replyTo) replyTo.value = e;
+        if (subject) subject.value = "Contato pelo portfolio - " + n;
         if (submitBtn) submitBtn.disabled = true;
-        mostrarInfo(
-            "Abrindo seu aplicativo de e-mail… Se nada abrir, envie manualmente para " +
-                DESTINO +
-                "."
-        );
-
-        window.location.href = href;
-
-        setTimeout(function () {
-            if (submitBtn) submitBtn.disabled = false;
-        }, 2500);
     });
 
     [nome, email, telefone, mensagem].forEach(function (el) {

@@ -245,10 +245,13 @@
 
     <section id="contato" class="contato-section" aria-labelledby="titulo-contato">
         <h2 id="titulo-contato" class="about">Contato</h2>
-        <p class="contato-lead">Envie uma mensagem; o e-mail será aberto no seu aplicativo padrão com os dados preenchidos.</p>
+        <p class="contato-lead">Envie uma mensagem diretamente por aqui; ela chegará no meu e-mail de contato.</p>
         <div class="formulario-rodape">
             <div id="form-contato-aviso" class="form-aviso" hidden></div>
-            <form id="form-contato" action="#" method="get" novalidate>
+            <form id="form-contato" action="https://formsubmit.co/contato.renanjesusbispo@gmail.com" method="post" novalidate>
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" id="contato-replyto" name="_replyto" value="">
+                <input type="hidden" id="contato-subject" name="_subject" value="Contato pelo portfolio">
                 <div class="grupo-input">
                     <label for="contato-nome">Nome completo</label>
                     <input type="text" id="contato-nome" name="nome" autocomplete="name" placeholder="Seu nome">
@@ -268,7 +271,7 @@
                 <button type="submit">Enviar mensagem</button>
             </form>
         </div>
-        <p class="contato-nota">O envio usa o recurso <strong>mailto</strong> do navegador (não há servidor no site). É necessário ter um app de e-mail configurado no dispositivo.</p>
+        <p class="contato-nota">O envio é feito por um serviço de formulário seguro para sites estáticos.</p>
     </section>
 
     <script src="scripts/contact-form.js" defer></script>
