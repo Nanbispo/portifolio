@@ -108,3 +108,31 @@
     color: var(--text, #0c0f12);
     transform: translateY(-2px);
 }
+
+@media (max-width: 700px) {
+    .tecnologs {
+        justify-content: flex-start;
+        padding-inline: 1rem;
+    }
+}
+
+@media (max-width: 430px) {
+    .tecnologs {
+        gap: 0.85rem;
+    }
+
+    .tec {
+        width: 64px;
+        height: 64px;
+        border-radius: 14px;
+        padding: 0.75rem;
+    }
+
+    .tec::before {
+        border-radius: 14px;
+    }
+
+    .tech-name {
+        font-size: 0.78rem;
+    }
+}

@@ -64,7 +64,7 @@ body {
 
     font-family: "Nunito", sans-serif;
 
-    font-size: clamp(6.25rem, 4.5vw, 3.5rem);
+    font-size: clamp(3.2rem, 8vw, 6.25rem);
 
     font-weight: 900;
 
@@ -84,7 +84,7 @@ body {
 
     font-family: "Nunito", sans-serif;
 
-    font-size: clamp(3rem, 2.2vw, 1.5rem);
+    font-size: clamp(1.35rem, 3.6vw, 3rem);
 
     font-weight: 500;
 
@@ -341,6 +341,68 @@ h4 {
         font-size: 1.45rem;
 
         padding: 0.7rem;
+
+    }
+
+}
+
+@media (max-width: 430px) {
+
+    .main {
+
+        min-height: auto;
+
+        padding-top: 2.75rem;
+
+        padding-bottom: 2rem;
+
+        gap: 1rem;
+
+    }
+
+    .apresentacao {
+
+        font-size: clamp(2.75rem, 16vw, 3.8rem);
+
+        line-height: 1.05;
+
+        letter-spacing: 0;
+
+    }
+
+    .descricao {
+
+        font-size: 1.15rem;
+
+        line-height: 1.45;
+
+        max-width: 18rem;
+
+        margin-bottom: 0.45rem;
+
+    }
+
+    .main-visual {
+
+        width: min(14rem, 68vw);
+
+        margin-top: 0.75rem;
+
+    }
+
+    .social-links {
+
+        gap: 0.45rem;
+
+    }
+
+    .RedesSociais {
+
+        width: 2.75rem;
+
+        height: 2.75rem;
+
+        padding: 0.65rem;
 
     }
 

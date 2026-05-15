@@ -177,11 +177,36 @@
 }
 
 @media (max-width: 480px) {
+    .projects-container {
+        padding: 0;
+    }
+
     .project-card__body {
         padding: 1.15rem 1.15rem 1.1rem;
     }
 
     .project-card__title {
         font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 430px) {
+    .project-card {
+        border-radius: 12px;
+    }
+
+    .project-card__desc {
+        font-size: 0.88rem;
+        line-height: 1.52;
+    }
+
+    .project-card__actions {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .project-card__btn {
+        width: 100%;
+        box-sizing: border-box;
     }
 }

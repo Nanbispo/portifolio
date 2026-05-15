@@ -24,7 +24,13 @@
 <body>
     <header class="site-header">
         <nav class="site-nav" aria-label="Navegação principal">
-            <ul>
+            <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+                <span class="site-nav__toggle-line"></span>
+                <span class="site-nav__toggle-line"></span>
+                <span class="site-nav__toggle-line"></span>
+                <span class="site-nav__toggle-label">Menu</span>
+            </button>
+            <ul id="menu-principal">
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#sobre-mim">Sobre mim</a></li>
                 <li><a href="#experiencias">Experiências</a></li>
@@ -266,6 +272,7 @@
     </section>
 
     <script src="scripts/contact-form.js" defer></script>
+    <script src="scripts/nav.js" defer></script>
 </body>
 
 </html>
