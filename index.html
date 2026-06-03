@@ -4,33 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Renan Bispo, desenvolvedor back-end com foco em Go, Java, PostgreSQL e APIs.">
+    <meta name="author" content="Renan Bispo">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/about.css">
     <link rel="stylesheet" href="styles/experiencias.css">
     <link rel="stylesheet" href="styles/projects.css">
     <link rel="stylesheet" href="styles/tecs.css">
     <link rel="stylesheet" href="styles/contact.css">
-
-    <title>Renan</title>
+    <title>Renan Bispo | Desenvolvedor Back-end</title>
 </head>
 
 <body>
     <header class="site-header">
         <nav class="site-nav" aria-label="Navegação principal">
-            <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+            <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
                 <span class="site-nav__toggle-line"></span>
                 <span class="site-nav__toggle-line"></span>
                 <span class="site-nav__toggle-line"></span>
-                <span class="site-nav__toggle-label">Menu</span>
             </button>
-            <ul id="menu-principal">
+            <ul id="menu-principal" class="site-nav__menu">
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#sobre-mim">Sobre mim</a></li>
                 <li><a href="#experiencias">Experiências</a></li>
@@ -41,234 +41,222 @@
         </nav>
     </header>
 
-    <section id="inicio" class="main" aria-label="Início">
-        <header class="main-cabeca">
-            <h1 class="apresentacao">Renan Bispo</h1>
-            <p class="descricao">Desenvolvedor Back-end</p>
-            <div class="social-links">
-                <a href="https://github.com/Nanbispo"><img class="RedesSociais" src="imgs/github.svg" alt="GitHub"></a>
-                <a href="https://www.linkedin.com/in/renan-bispo/"><img class="RedesSociais" src="imgs/linkedin.svg"
-                        alt="LinkedIn"></a>
-                <a href="https://www.instagram.com/nanbispo_/"><img class="RedesSociais" src="imgs/instagram.svg"
-                        alt="Instagram"></a>
+    <main>
+        <section id="inicio" class="main" aria-label="Início">
+            <div class="main-cabeca">
+                <h1 class="apresentacao">Renan Bispo</h1>
+                <p class="descricao">Desenvolvedor Back-end</p>
+                <div class="social-links" aria-label="Redes sociais">
+                    <a href="https://github.com/Nanbispo" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Renan Bispo">
+                        <img class="RedesSociais" src="assets/images/github.svg" alt="">
+                    </a>
+                    <a href="https://www.linkedin.com/in/renan-bispo/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Renan Bispo">
+                        <img class="RedesSociais" src="assets/images/linkedin.svg" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/nanbispo_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Renan Bispo">
+                        <img class="RedesSociais" src="assets/images/instagram.svg" alt="">
+                    </a>
+                </div>
             </div>
-        </header>
-        <div class="main-visual">
-            <img class="main-illustration" src="imgs/file.svg" alt="" width="360" height="360" decoding="async">
-        </div>
-    </section>
 
-    <section id="sobre-mim" class="principal-about" aria-labelledby="titulo-sobre">
-        <header>
-            <h2 id="titulo-sobre" class="about">Sobre mim</h2>
-            <div class="sobre-mim">
-                <p>Sou desenvolvedor back-end com experiência em Go, Java e PostgreSQL, atuando na construção de APIs
-                    escaláveis, seguras e de fácil manutenção. Tenho foco em desenvolver soluções performáticas,
-                    estruturando consultas otimizadas e arquiteturas flexíveis que contribuem para aplicações mais
-                    eficientes e sustentáveis. <br>
-
-                    <br>Também possuo conhecimentos em Docker, versionamento de código com Git e desenvolvimento em
-                    ADVPL, o que amplia minha capacidade de atuar tanto em sistemas legados quanto em projetos modernos.
-                    Busco constantemente evoluir tecnicamente, aplicando boas práticas de desenvolvimento, organização
-                    de código e melhoria contínua em cada projeto.
-                </p>
+            <div class="main-visual">
+                <img class="main-illustration" src="assets/images/file.svg" alt="Ilustração de perfil de Renan Bispo" width="360" height="360" decoding="async">
             </div>
-        </header>
-    </section>
+        </section>
 
-    <section id="experiencias" class="experiencias-section" aria-labelledby="titulo-experiencias">
-        <h2 id="titulo-experiencias" class="about">Experiências</h2>
-        <ol class="timeline">
-            <li class="timeline-item">
-                <span class="timeline-date">2023</span>
-                <div class="timeline-content">
-                    <h3>Início na programação</h3>
-                    <p>Primeiro contato com desenvolvimento de software, estudando lógica, fundamentos da web e boas
-                        práticas de código. Foco em entender como sistemas se comunicam e em construir uma base sólida
-                        para evoluir na área.</p>
-
-            </li>
-            <li class="timeline-item">
-                <span class="timeline-date">Atual</span>
-                <div class="timeline-content">
-                    <h3>Grupo Vitalmed - Estagiário de suporte e desenvolvimento</h3>
-                    <p>Atuo como estagiário de suporte e desenvolvimento na empresa Grupo Vitalmed, onde realizo suporte
-                        técnico aos usuários e desenvolvo soluções para problemas de software. Também realizo manutenção
-                        de sistemas legados e desenvolvo novas funcionalidades para os sistemas.</p>
+        <section id="sobre-mim" class="principal-about" aria-labelledby="titulo-sobre">
+            <div class="section-inner">
+                <h2 id="titulo-sobre" class="section-title">Sobre mim</h2>
+                <div class="sobre-mim">
+                    <p>
+                        Sou desenvolvedor back-end com experiência em Go, Java e PostgreSQL, atuando na construção de APIs escaláveis,
+                        seguras e de fácil manutenção. Tenho foco em desenvolver soluções performáticas, estruturando consultas
+                        otimizadas e arquiteturas flexíveis que contribuem para aplicações mais eficientes e sustentáveis.
+                    </p>
+                    <p>
+                        Também possuo conhecimentos em Docker, versionamento de código com Git e desenvolvimento em ADVPL, o que amplia
+                        minha capacidade de atuar tanto em sistemas legados quanto em projetos modernos. Busco evoluir tecnicamente com
+                        boas práticas, organização de código e melhoria contínua em cada projeto.
+                    </p>
                 </div>
-            </li>
-        </ol>
-    </section>
+            </div>
+        </section>
 
-    <section id="projetos" class="projetos-section" aria-labelledby="titulo-projetos">
-        <h2 id="titulo-projetos" class="about">Projetos</h2>
-        <div class="projects-container">
-            <article class="project-card">
-                <div class="project-card__media">
-                    <img class="project-card__thumb" src="projects/Clean-code.jpg" alt="">
-                </div>
-                <div class="project-card__body">
-                    <h3 class="project-card__title">Forum</h3>
-                    <p class="project-card__desc">Sistema de gerenciamento colaborativo voltado para a criação,
-                        organização e interação em discussões entre usuários, permitindo o cadastro de tópicos, envio de
-                        dúvidas, compartilhamento de respostas e acompanhamento das interações em um ambiente
-                        estruturado e intuitivo.</p>
-                    <ul class="project-card__stack" aria-label="Tecnologias utilizadas">
-                        <img class="project-tech-icon" src="tecs/Kotlin.svg" alt="" width="24" height="24"
-                            decoding="async" aria-hidden="true">
-                        <img class="project-tech-icon" src="tecs/Spring.svg" alt="" width="24" height="24"
-                            decoding="async" aria-hidden="true">
-                        <img class="project-tech-icon" src="tecs/Apache Maven.svg" alt="" width="24" height="24"
-                            decoding="async" aria-hidden="true">
-                        <img class="project-tech-icon" src="tecs/Postman.svg" alt="" width="24" height="24"
-                            decoding="async" aria-hidden="true">
-                        </li>
-                    </ul>
-                    <div class="project-card__actions">
-                        <a class="project-card__btn project-card__btn--ghost"
-                            href="https://github.com/Nanbispo/forum">Ver projeto</a>
-                        <a class="project-card__btn project-card__btn--primary" href="https://github.com/Nanbispo/forum"
-                            target="_blank" rel="noopener noreferrer">Código</a>
+        <section id="experiencias" class="experiencias-section" aria-labelledby="titulo-experiencias">
+            <h2 id="titulo-experiencias" class="section-title">Experiências</h2>
+            <ol class="timeline">
+                <li class="timeline-item">
+                    <span class="timeline-date">2023</span>
+                    <div class="timeline-content">
+                        <h3>Início na programação</h3>
+                        <p>
+                            Primeiro contato com desenvolvimento de software, estudando lógica, fundamentos da web e boas práticas de
+                            código. Foco em entender como sistemas se comunicam e em construir uma base sólida para evoluir na área.
+                        </p>
                     </div>
-                </div>
-            </article>
-            <article class="project-card">
-                <div class="project-card__media">
-                    <img class="project-card__thumb" src="projects/Clean-code.jpg" alt="Visual do projeto ScreenMatch">
-                </div>
-                <div class="project-card__body">
-                    <h3 class="project-card__title">Produto Go</h3>
-                    <p class="project-card__desc">API em Go para gerenciamento de produtos, permitindo o cadastro,
-                        edição, exclusão e busca de produtos.</p>
-                    <ul class="project-card__stack" aria-label="Tecnologias utilizadas">
-
-                        <img class="project-tech-icon" src="tecs/Go.svg" alt="" width="24" height="24"
-                                decoding="async" aria-hidden="true">
-                        <img class="project-tech-icon" src="tecs/PostgresSQL.svg" alt="" width="24" height="24"
-                                decoding="async" aria-hidden="true">
-                        <img class="project-tech-icon" src="tecs/Docker.svg" alt="" width="24" height="24">
-                        <img class="project-tech-icon" src="tecs/Postman.svg" alt="" width="24" height="24">
-                        <img class="project-tech-icon" src="tecs/Git.svg" alt="" width="24" height="24"
-                                decoding="async" aria-hidden="true">
-                            
-                        </li>
-                    </ul>
-                    <div class="project-card__actions">
-                        <a class="project-card__btn project-card__btn--ghost" href="https://github.com/Nanbispo/api-produto">Ver projeto</a>
-                        <a class="project-card__btn project-card__btn--primary"
-                            href="https://github.com/Nanbispo/api-produto" target="_blank"
-                            rel="noopener noreferrer">Código</a>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-date">Atual</span>
+                    <div class="timeline-content">
+                        <h3>Grupo Vitalmed - Estagiário de suporte e desenvolvimento</h3>
+                        <p>
+                            Atuo com suporte técnico aos usuários, manutenção de sistemas legados e desenvolvimento de soluções para
+                            problemas de software, além de novas funcionalidades para os sistemas internos.
+                        </p>
                     </div>
-                </div>
-            </article>
-            <article class="project-card">
-                <div class="project-card__media">
-                    <img class="project-card__thumb" src="imgs/Lume.svg" alt="Visual do projeto Forum">
-                </div>
-                <div class="project-card__body">
-                    <h3 class="project-card__title">Lume</h3>
-                    <p class="project-card__desc">O Lume é um site moderno e responsivo desenvolvida para uma plataforma de pedidos de café. O projeto foca em uma estética minimalista, utilizando tons terrosos e uma tipografia limpa para proporcionar uma experiência de usuário acolhedora e funcional.</p>
-                    <ul class="project-card__stack" aria-label="Tecnologias utilizadas">
-                    
-                        <li class="project-card__stack-item" title="Git">
-                            <img class="project-tech-icon" src="tecs/html.svg" alt="" width="24" height="24"
-                                decoding="async" aria-hidden="true">
-                            <img class="project-tech-icon" src="tecs/css.svg" alt="" width="24" height="24"
-                                decoding="async" aria-hidden="true">
-                            <img class="project-tech-icon" src="tecs/javascript.svg" alt="" width="24" height="24"
-                                decoding="async" aria-hidden="true">
-                            <img class="project-tech-icon" src="tecs/Git.svg" alt="" width="24" height="24"
-                                decoding="async" aria-hidden="true">
-                        </li>
-                    </ul>
-                    <div class="project-card__actions">
-                        <a class="project-card__btn project-card__btn--ghost" href="https://renanbispo-dotcom.github.io/Lume/">Ver projeto</a>
-                        <a class="project-card__btn project-card__btn--primary" href="https://github.com/renanbispo-dotcom/Lume"
-                            target="_blank" rel="noopener noreferrer">Código</a>
+                </li>
+            </ol>
+        </section>
+
+        <section id="projetos" class="projetos-section" aria-labelledby="titulo-projetos">
+            <h2 id="titulo-projetos" class="section-title">Projetos</h2>
+            <div class="projects-container">
+                <article class="project-card">
+                    <div class="project-card__media">
+                        <img class="project-card__thumb" src="assets/projects/Clean-code.jpg" alt="Capa conceitual do projeto Forum" loading="lazy">
                     </div>
-                </div>
-            </article>
-        </div>
-    </section>
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">Forum</h3>
+                        <p class="project-card__desc">
+                            Sistema colaborativo para criação, organização e interação em discussões entre usuários, com cadastro de
+                            tópicos, envio de dúvidas, compartilhamento de respostas e acompanhamento das interações.
+                        </p>
+                        <ul class="project-card__stack" aria-label="Tecnologias utilizadas no projeto Forum">
+                            <li><img class="project-tech-icon" src="assets/tech/Kotlin.svg" alt="Kotlin" width="28" height="28" loading="lazy"></li>
+                            <li><img class="project-tech-icon" src="assets/tech/Spring.svg" alt="Spring" width="28" height="28" loading="lazy"></li>
+                            <li><img class="project-tech-icon" src="assets/tech/Apache Maven.svg" alt="Apache Maven" width="28" height="28" loading="lazy"></li>
+                            <li><img class="project-tech-icon" src="assets/tech/Postman.svg" alt="Postman" width="28" height="28" loading="lazy"></li>
+                        </ul>
+                        <div class="project-card__actions">
+                            <a class="project-card__btn project-card__btn--ghost" href="https://github.com/Nanbispo/forum" target="_blank" rel="noopener noreferrer">Ver projeto</a>
+                            <a class="project-card__btn project-card__btn--primary" href="https://github.com/Nanbispo/forum" target="_blank" rel="noopener noreferrer">Código</a>
+                        </div>
+                    </div>
+                </article>
 
-    <section id="tecnologias" class="tecnologias-section" aria-labelledby="titulo-tecnologias">
-        <h2 id="titulo-tecnologias" class="about">Tecnologias</h2>
-        <div class="tecnologs">
-            <a href="https://www.w3schools.com/html/" class="tech-card">
-                <div class="tec">
-                    <img src="tecs/html.svg" alt="HTML5">
-                </div>
-                <span class="tech-name">HTML5</span>
-            </a>
-            <a href="https://www.w3schools.com/css/" class="tech-card">
-                <div class="tec">
-                    <img src="tecs/css.svg" alt="CSS3">
-                </div>
-                <span class="tech-name">CSS3</span>
-            </a>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" class="tech-card">
-                <div class="tec">
-                    <img src="tecs/javascript.svg" alt="JavaScript">
-                </div>
-                <span class="tech-name">JavaScript</span>
-            </a>
-            <a href="" class="tech-card">
-                <div class="tec">
-                    <img src="tecs/Go.svg" alt="Go">
-                </div>
-                <span class="tech-name">Golang</span>
-            </a>
-            <a href="" class="tech-card">
-                <div class="tec">
-                    <img src="tecs/PostgresSQL.svg" alt="PostgreSQL">
-                </div>
-                <span class="tech-name">PostgreSQL</span>
-            </a>
-            <a href="" class="tech-card">
-                <div class="tec">
-                    <img src="tecs/Git.svg" alt="Git">
-                </div>
-                <span class="tech-name">Git</span>
-            </a>
-            <a href="" class="tech-card">
-                <div class="tec">
-                    <img src="tecs/Docker.svg" alt="Docker">
-                </div>
-                <span class="tech-name">Docker</span>
-            </a>
-        </div>
-    </section>
+                <article class="project-card">
+                    <div class="project-card__media">
+                        <img class="project-card__thumb" src="assets/projects/Clean-code.jpg" alt="Capa conceitual do projeto Produto Go" loading="lazy">
+                    </div>
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">Produto Go</h3>
+                        <p class="project-card__desc">
+                            API em Go para gerenciamento de produtos, permitindo cadastro, edição, exclusão e busca de registros com
+                            persistência em PostgreSQL.
+                        </p>
+                        <ul class="project-card__stack" aria-label="Tecnologias utilizadas no projeto Produto Go">
+                            <li><img class="project-tech-icon" src="assets/tech/Go.svg" alt="Go" width="28" height="28" loading="lazy"></li>
+                            <li><img class="project-tech-icon" src="assets/tech/PostgresSQL.svg" alt="PostgreSQL" width="28" height="28" loading="lazy"></li>
+                            <li><img class="project-tech-icon" src="assets/tech/Docker.svg" alt="Docker" width="28" height="28" loading="lazy"></li>
+                            <li><img class="project-tech-icon" src="assets/tech/Postman.svg" alt="Postman" width="28" height="28" loading="lazy"></li>
+                            <li><img class="project-tech-icon" src="assets/tech/Git.svg" alt="Git" width="28" height="28" loading="lazy"></li>
+                        </ul>
+                        <div class="project-card__actions">
+                            <a class="project-card__btn project-card__btn--ghost" href="https://github.com/Nanbispo/api-produto" target="_blank" rel="noopener noreferrer">Ver projeto</a>
+                            <a class="project-card__btn project-card__btn--primary" href="https://github.com/Nanbispo/api-produto" target="_blank" rel="noopener noreferrer">Código</a>
+                        </div>
+                    </div>
+                </article>
 
-    <section id="contato" class="contato-section" aria-labelledby="titulo-contato">
-        <h2 id="titulo-contato" class="about">Contato</h2>
-        <p class="contato-lead">Envie uma mensagem diretamente por aqui; ela chegará no meu e-mail de contato.</p>
-        <div class="formulario-rodape">
-            <div id="form-contato-aviso" class="form-aviso" hidden></div>
-            <form id="form-contato" action="https://formsubmit.co/contato.renanjesusbispo@gmail.com" method="post" novalidate>
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" id="contato-replyto" name="_replyto" value="">
-                <input type="hidden" id="contato-subject" name="_subject" value="Contato pelo portfolio">
-                <div class="grupo-input">
-                    <label for="contato-nome">Nome completo</label>
-                    <input type="text" id="contato-nome" name="nome" autocomplete="name" placeholder="Seu nome">
-                </div>
-                <div class="grupo-input">
-                    <label for="contato-email">E-mail</label>
-                    <input type="email" id="contato-email" name="email" autocomplete="email" inputmode="email" placeholder="seu@email.com">
-                </div>
-                <div class="grupo-input">
-                    <label for="contato-telefone">Telefone</label>
-                    <input type="tel" id="contato-telefone" name="telefone" autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000">
-                </div>
-                <div class="grupo-input">
-                    <label for="contato-mensagem">Mensagem</label>
-                    <textarea id="contato-mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem"></textarea>
-                </div>
-                <button type="submit">Enviar mensagem</button>
-            </form>
-        </div>
-        <p class="contato-nota">O envio é feito por um serviço de formulário seguro para sites estáticos.</p>
-    </section>
+                <article class="project-card">
+                    <div class="project-card__media project-card__media--contain">
+                        <img class="project-card__thumb" src="assets/images/Lume.svg" alt="Visual do projeto Lume" loading="lazy">
+                    </div>
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">Lume</h3>
+                        <p class="project-card__desc">
+                            Site responsivo para uma plataforma de pedidos de café, com estética minimalista, tons terrosos e uma
+                            experiência de usuário acolhedora e funcional.
+                        </p>
+                        <ul class="project-card__stack" aria-label="Tecnologias utilizadas no projeto Lume">
+                            <li><img class="project-tech-icon" src="assets/tech/html.svg" alt="HTML5" width="28" height="28" loading="lazy"></li>
+                            <li><img class="project-tech-icon" src="assets/tech/css.svg" alt="CSS3" width="28" height="28" loading="lazy"></li>
+                            <li><img class="project-tech-icon" src="assets/tech/javascript.svg" alt="JavaScript" width="28" height="28" loading="lazy"></li>
+                            <li><img class="project-tech-icon" src="assets/tech/Git.svg" alt="Git" width="28" height="28" loading="lazy"></li>
+                        </ul>
+                        <div class="project-card__actions">
+                            <a class="project-card__btn project-card__btn--ghost" href="https://renanbispo-dotcom.github.io/Lume/" target="_blank" rel="noopener noreferrer">Ver projeto</a>
+                            <a class="project-card__btn project-card__btn--primary" href="https://github.com/renanbispo-dotcom/Lume" target="_blank" rel="noopener noreferrer">Código</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="tecnologias" class="tecnologias-section" aria-labelledby="titulo-tecnologias">
+            <h2 id="titulo-tecnologias" class="section-title">Tecnologias</h2>
+            <div class="tecnologs" aria-label="Lista de tecnologias">
+                <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" class="tech-card" target="_blank" rel="noopener noreferrer">
+                    <span class="tec"><img src="assets/tech/html.svg" alt="HTML5" loading="lazy"></span>
+                    <span class="tech-name">HTML5</span>
+                </a>
+                <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" class="tech-card" target="_blank" rel="noopener noreferrer">
+                    <span class="tec"><img src="assets/tech/css.svg" alt="CSS3" loading="lazy"></span>
+                    <span class="tech-name">CSS3</span>
+                </a>
+                <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" class="tech-card" target="_blank" rel="noopener noreferrer">
+                    <span class="tec"><img src="assets/tech/javascript.svg" alt="JavaScript" loading="lazy"></span>
+                    <span class="tech-name">JavaScript</span>
+                </a>
+                <a href="https://go.dev/" class="tech-card" target="_blank" rel="noopener noreferrer">
+                    <span class="tec"><img src="assets/tech/Go.svg" alt="Go" loading="lazy"></span>
+                    <span class="tech-name">Golang</span>
+                </a>
+                <a href="https://www.postgresql.org/" class="tech-card" target="_blank" rel="noopener noreferrer">
+                    <span class="tec"><img src="assets/tech/PostgresSQL.svg" alt="PostgreSQL" loading="lazy"></span>
+                    <span class="tech-name">PostgreSQL</span>
+                </a>
+                <a href="https://git-scm.com/" class="tech-card" target="_blank" rel="noopener noreferrer">
+                    <span class="tec"><img src="assets/tech/Git.svg" alt="Git" loading="lazy"></span>
+                    <span class="tech-name">Git</span>
+                </a>
+                <a href="https://www.docker.com/" class="tech-card" target="_blank" rel="noopener noreferrer">
+                    <span class="tec"><img src="assets/tech/Docker.svg" alt="Docker" loading="lazy"></span>
+                    <span class="tech-name">Docker</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="contato" class="contato-section" aria-labelledby="titulo-contato">
+            <h2 id="titulo-contato" class="section-title">Contato</h2>
+            <p class="contato-lead">Envie uma mensagem diretamente por aqui; ela chegará no meu e-mail de contato.</p>
+            <div class="formulario-rodape">
+                <div id="form-contato-aviso" class="form-aviso" hidden></div>
+                <form
+                    id="form-contato"
+                    action="https://formsubmit.co/contato.renanjesusbispo@gmail.com"
+                    data-endpoint="https://formsubmit.co/ajax/contato.renanjesusbispo@gmail.com"
+                    method="post"
+                    novalidate>
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" id="contato-replyto" name="_replyto" value="">
+                    <input type="hidden" id="contato-subject" name="_subject" value="Contato pelo portfólio">
+                    <label class="campo-honeypot" for="contato-site">Site</label>
+                    <input class="campo-honeypot" type="text" id="contato-site" name="_honey" tabindex="-1" autocomplete="off">
+
+                    <div class="grupo-input">
+                        <label for="contato-nome">Nome completo</label>
+                        <input type="text" id="contato-nome" name="nome" autocomplete="name" placeholder="Seu nome" required>
+                    </div>
+                    <div class="grupo-input">
+                        <label for="contato-email">E-mail</label>
+                        <input type="email" id="contato-email" name="email" autocomplete="email" inputmode="email" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="grupo-input">
+                        <label for="contato-telefone">Telefone</label>
+                        <input type="tel" id="contato-telefone" name="telefone" autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000" required>
+                    </div>
+                    <div class="grupo-input">
+                        <label for="contato-mensagem">Mensagem</label>
+                        <textarea id="contato-mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem" required></textarea>
+                    </div>
+                    <button type="submit">Enviar mensagem</button>
+                </form>
+            </div>
+            <p class="contato-nota">Na primeira mensagem, o FormSubmit pode enviar um e-mail de ativação para confirmar o endereço de destino.</p>
+        </section>
+    </main>
 
     <script src="scripts/contact-form.js" defer></script>
     <script src="scripts/nav.js" defer></script>

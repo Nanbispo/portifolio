@@ -3,8 +3,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: calc(var(--header-height) + 0.5rem);
+    scroll-padding-top: calc(var(--header-height) + 0.75rem);
 }
 
 body {
@@ -13,61 +12,26 @@ body {
 
 .site-header {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    inset: 0 0 auto;
     z-index: 1000;
+    min-height: var(--header-height);
+    padding: 1rem clamp(1rem, 3vw, 2rem);
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.85rem;
-    min-height: var(--header-height);
-    padding: 1rem clamp(1rem, 3vw, 2rem) 1.1rem;
-    box-sizing: border-box;
-    font-family: "Nunito", sans-serif;
-    background: transparent;
-    border-bottom: none;
-    transition:
-        background 0.25s ease,
-        border-color 0.25s ease,
-        box-shadow 0.25s ease,
-        min-height 0.25s ease,
-        padding 0.25s ease;
+    background: rgba(232, 238, 244, 0);
+    transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .site-header--scrolled {
     background: rgba(216, 226, 235, 0.96);
-    border-bottom: 1px solid rgba(12, 24, 40, 0.1);
+    border-bottom: 1px solid var(--edge);
     box-shadow: 0 12px 30px rgba(12, 22, 35, 0.08);
     backdrop-filter: blur(14px);
 }
 
-.site-logo {
-    font-weight: 700;
-    font-size: clamp(1.35rem, 2.4vw, 1.65rem);
-    color: var(--text, #0c0f12);
-    text-decoration: none;
-    letter-spacing: 0.04em;
-    text-shadow: var(--text-depth-strong, 0 1px 0 rgba(255, 255, 255, 0.95), 0 3px 18px rgba(12, 22, 35, 0.09));
-    transition:
-        color 0.25s ease,
-        transform 0.25s ease,
-        text-shadow 0.25s ease;
-}
-
-.site-logo:hover,
-.site-logo:focus-visible {
-    color: var(--text, #0c0f12);
-    transform: scale(1.04);
-    text-shadow:
-        0 1px 0 rgba(255, 255, 255, 1),
-        0 4px 22px rgba(12, 22, 35, 0.12);
-}
-
 .site-nav {
-    width: 100%;
-    max-width: 56rem;
+    width: min(100%, 56rem);
     display: flex;
     justify-content: center;
     position: relative;
@@ -77,7 +41,7 @@ body {
     display: none;
 }
 
-.site-nav ul {
+.site-nav__menu {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -90,49 +54,39 @@ body {
 
 .site-nav a {
     display: inline-block;
-    color: var(--text-muted, #243038);
-    text-decoration: none;
-    font-size: clamp(1.05rem, 2vw, 1.2rem);
-    font-weight: 600;
     padding: 0.55rem 1.1rem;
-    border-radius: 999px;
     border: 1px solid transparent;
-    text-shadow: var(--text-depth, 0 1px 0 rgba(255, 255, 255, 0.88), 0 2px 14px rgba(12, 22, 35, 0.07));
-    transition:
-        color 0.25s ease,
-        background 0.25s ease,
-        border-color 0.25s ease,
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+    border-radius: 999px;
+    color: var(--text-muted);
+    font-size: clamp(1.05rem, 2vw, 1.2rem);
+    font-weight: 700;
+    text-decoration: none;
+    text-shadow: var(--text-depth);
+    transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
-    color: var(--text, #0c0f12);
-    background: rgba(255, 255, 255, 0.55);
-    border-color: var(--edge, rgba(12, 24, 40, 0.1));
-    transform: translateY(-3px);
-    box-shadow:
-        0 10px 26px rgba(12, 22, 35, 0.1),
-        0 1px 0 rgba(255, 255, 255, 0.9) inset;
-}
-
-.site-nav a:active {
-    transform: translateY(-1px);
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.58);
+    border-color: var(--edge);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(12, 22, 35, 0.1), 0 1px 0 rgba(255, 255, 255, 0.9) inset;
+    outline: none;
 }
 
 @media (max-width: 640px) {
     :root {
-        --header-height: 7.5rem;
+        --header-height: 7.35rem;
     }
 
-    .site-nav ul {
-        gap: 0.45rem 0.65rem;
+    .site-nav__menu {
+        gap: 0.4rem 0.65rem;
     }
 
     .site-nav a {
-        font-size: clamp(0.98rem, 3.5vw, 1.1rem);
         padding: 0.5rem 0.85rem;
+        font-size: clamp(0.98rem, 3.5vw, 1.1rem);
     }
 }
 
@@ -142,31 +96,28 @@ body {
     }
 
     .site-header {
-        align-items: flex-end;
-        min-height: var(--header-height);
+        justify-content: flex-end;
         padding: 0.85rem 1rem;
     }
 
     .site-nav {
+        width: auto;
         justify-content: flex-end;
-        max-width: none;
     }
 
     .site-nav__toggle {
+        width: 2.85rem;
+        height: 2.85rem;
         display: inline-flex;
         position: relative;
         align-items: center;
         justify-content: center;
-        width: 2.85rem;
-        height: 2.85rem;
-        border-radius: 12px;
         border: 1px solid rgba(12, 24, 40, 0.12);
-        background: rgba(244, 248, 251, 0.82);
-        color: var(--text, #0c0f12);
+        border-radius: 12px;
+        background: rgba(244, 248, 251, 0.88);
+        color: var(--text);
         cursor: pointer;
-        box-shadow:
-            0 1px 0 rgba(255, 255, 255, 0.95) inset,
-            0 8px 22px rgba(12, 22, 35, 0.08);
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.95) inset, var(--shadow-sm);
     }
 
     .site-nav__toggle-line {
@@ -186,15 +137,6 @@ body {
         transform: translateY(0.42rem);
     }
 
-    .site-nav__toggle-label {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        clip: rect(0 0 0 0);
-        white-space: nowrap;
-    }
-
     .site-nav--open .site-nav__toggle-line:nth-child(1) {
         transform: rotate(45deg);
     }
@@ -207,7 +149,7 @@ body {
         transform: rotate(-45deg);
     }
 
-    .site-nav ul {
+    .site-nav__menu {
         position: absolute;
         top: calc(100% + 0.75rem);
         right: 0;
@@ -216,9 +158,9 @@ body {
         grid-template-columns: 1fr;
         gap: 0.25rem;
         padding: 0.65rem;
+        border: 1px solid rgba(12, 24, 40, 0.12);
         border-radius: 16px;
         background: rgba(216, 226, 235, 0.98);
-        border: 1px solid rgba(12, 24, 40, 0.12);
         box-shadow: 0 16px 36px rgba(12, 22, 35, 0.14);
         opacity: 0;
         pointer-events: none;
@@ -226,18 +168,17 @@ body {
         transition: opacity 0.2s ease, transform 0.2s ease;
     }
 
-    .site-nav--open ul {
+    .site-nav--open .site-nav__menu {
         opacity: 1;
         pointer-events: auto;
         transform: translateY(0);
     }
 
     .site-nav a {
-        display: block;
         width: 100%;
-        box-sizing: border-box;
+        display: block;
         border-radius: 10px;
-        font-size: 0.98rem;
         padding: 0.7rem 0.8rem;
+        font-size: 0.98rem;
     }
 }
