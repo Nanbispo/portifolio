@@ -216,9 +216,9 @@ h4 {
 
     justify-content: center;
 
-    padding: 0.85rem;
+    padding: 1.1rem;
 
-    border-radius: 50%;
+    border-radius: 12px;
 
     background: transparent;
 
@@ -234,9 +234,9 @@ h4 {
 
     font-family: "Nunito", sans-serif;
 
-    width: 3.35rem;
+    width: 6rem;
 
-    height: 3.35rem;
+    height: 6rem;
 
     transition: transform 0.25s ease, opacity 0.25s ease, filter 0.25s ease;
 
@@ -334,13 +334,13 @@ h4 {
 
     .RedesSociais {
 
-        width: 3rem;
+        width: 3.75rem;
 
-        height: 3rem;
+        height: 3.75rem;
 
         font-size: 1.45rem;
 
-        padding: 0.7rem;
+        padding: 0.9rem;
 
     }
 
@@ -398,11 +398,11 @@ h4 {
 
     .RedesSociais {
 
-        width: 2.75rem;
+        width: 3.5rem;
 
-        height: 2.75rem;
+        height: 3.5rem;
 
-        padding: 0.65rem;
+        padding: 0.85rem;
 
     }
 
