@@ -1,3 +1,6 @@
+/* ==========================================================================
+   1. VARIÁVEIS IDEAIS E RESET GLOBAL
+   ========================================================================== */
 :root {
     --page-bg: #e8eef4;
     --surface: #f6f9fc;
@@ -17,6 +20,8 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -25,16 +30,17 @@ html {
 
 body {
     min-height: 100vh;
-    margin: 0;
     background: var(--page-bg);
     color: var(--text);
     font-family: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
 img {
     max-width: 100%;
+    height: auto;
 }
 
 main {
@@ -43,8 +49,10 @@ main {
 
 a {
     color: inherit;
+    text-decoration: none;
 }
 
+/* Base de Seções */
 .section-inner {
     width: min(100%, 1200px);
 }
@@ -61,9 +69,647 @@ a {
     text-shadow: var(--text-depth-strong);
 }
 
+/* ==========================================================================
+   2. HEADER & NAVEGAÇÃO (NAV CORRIGIDA)
+   ========================================================================== */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(232, 238, 244, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--edge);
+}
+
+.site-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-nav__menu {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.site-nav__menu a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.site-nav__menu a:hover {
+    color: var(--text);
+}
+
+.site-nav__toggle {
+    display: none;
+}
+
+/* ==========================================================================
+   3. SEÇÃO PRINCIPAL (HERO / INÍCIO)
+   ========================================================================== */
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    box-sizing: border-box;
+    min-height: 100vh;
+    width: 100%;
+    padding-top: clamp(6rem, 16vh, 10rem);
+    padding-bottom: clamp(2.5rem, 8vh, 5rem);
+    padding-left: clamp(1.5rem, 6vw, 4.5rem);
+    padding-right: clamp(1.5rem, 6vw, 4.5rem);
+    gap: clamp(1.5rem, 4vw, 3.5rem);
+    position: relative;
+}
+
+.main-cabeca {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: min(42rem, 100%);
+}
+
+.apresentacao {
+    font-family: "Nunito", sans-serif;
+    font-size: clamp(2.3rem, 7vw, 5rem);
+    font-weight: 900;
+    color: var(--text, #0c0f12);
+    margin-bottom: 0.2rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    text-shadow: var(--text-depth-strong);
+    white-space: normal; /* Corrigido para não estourar telas pequenas */
+}
+
+.descricao {
+    font-family: "Nunito", sans-serif;
+    font-size: clamp(1.35rem, 3vw, 2.2rem);
+    font-weight: 700;
+    color: var(--text-muted, #243038);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.descricao--curta {
+    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+    font-weight: 600;
+    color: var(--text-soft);
+    opacity: 0.85;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+/* Alinhamento Lado a Lado dos Elementos CTA */
+.cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+/* Ícones Sociais Corrigidos */
+.social-link-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 12px;
+    background: var(--surface-strong);
+    border: 1px solid var(--edge);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.social-link-item img {
+    width: 1.8rem;
+    height: 1.8rem;
+    object-fit: contain;
+}
+
+.social-link-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(12, 22, 35, 0.15);
+}
+
+/* Botão de Currículo Atualizado */
+.btn-cv {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0 1.5rem;
+    height: 3.2rem; /* Mantém a mesma altura exata dos ícones sociais */
+    white-space: nowrap;
+    border-radius: 12px;
+    border: 1.5px solid var(--text, #0c0f12);
+    background: transparent;
+    color: var(--text, #0c0f12);
+    font-family: "Nunito", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-cv__icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    object-fit: contain;
+}
+
+.btn-cv:hover {
+    background: var(--text, #0c0f12);
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(12, 22, 35, 0.15);
+}
+
+.btn-cv:hover .btn-cv__icon {
+    filter: invert(1); /* Faz o ícone interno clarear no hover escuro */
+}
+
+/* Imagem Visual Hero */
+.main-visual {
+    flex: 0 1 auto;
+    align-self: center;
+    width: min(24rem, 38vw);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--hero-illustration-bg, #dce6ef);
+    border: 1px solid rgba(12, 24, 40, 0.06);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.65) inset,
+        0 10px 28px rgba(12, 22, 35, 0.1);
+}
+
+.main-illustration {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 12%;
+}
+
+/* ==========================================================================
+   4. SOBRE MIM
+   ========================================================================== */
+.principal-about {
+    display: flex;
+    justify-content: center;
+    margin: 4rem auto;
+    max-width: 1200px;
+    padding: 0 2rem;
+}
+
+.sobre-mim {
+    border-radius: 24px;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    padding: 2.5rem;
+    line-height: 1.7;
+    background: var(--surface, #f4f8fb);
+    color: var(--text-muted, #243038);
+    border: 1px solid var(--edge, rgba(12, 24, 40, 0.08));
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sobre-mim p {
+    position: relative;
+    z-index: 2;
+}
+
+.sobre-mim:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+/* ==========================================================================
+   5. EXPERIÊNCIAS (TIMELINE)
+   ========================================================================== */
+.experiencias-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.timeline {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 42rem;
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 0.55rem;
+    top: 0.35rem;
+    bottom: 0.35rem;
+    width: 3px;
+    border-radius: 3px;
+    background: linear-gradient(180deg, #9eb0c0 0%, #d5dee8 100%);
+}
+
+.timeline-item {
+    position: relative;
+    padding: 0 0 2.5rem 2.5rem;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.35rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    background: var(--text, #0c0f12);
+    border: 3px solid var(--surface, #f4f8fb);
+    box-shadow: 0 2px 6px rgba(12, 22, 35, 0.15);
+    z-index: 1;
+}
+
+.timeline-date {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text, #0c0f12);
+    background: var(--surface, #f4f8fb);
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    border: 1px solid var(--edge);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content h3 {
+    margin-bottom: 0.45rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--text);
+}
+
+.timeline-content p {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: var(--text-soft);
+}
+
+/* ==========================================================================
+   6. PROJETOS
+   ========================================================================== */
+.projetos-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+    gap: 1.75rem;
+    align-items: stretch;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--edge);
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+
+.project-card__media {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(145deg, #dfe8f0 0%, #eef3f8 100%);
+    overflow: hidden;
+}
+
+.project-card__thumb {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+}
+
+.project-card:hover .project-card__thumb {
+    transform: scale(1.04);
+}
+
+.project-card__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1.4rem;
+    gap: 0.65rem;
+}
+
+.project-card__title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--text);
+}
+
+.project-card__desc {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--text-soft);
+    flex: 1;
+}
+
+.project-card__stack {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(12, 24, 40, 0.07);
+}
+
+.project-tech-tag {
+    display: inline-flex;
+    align-items: center;
+    height: 26px;
+    padding: 0 0.55rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid var(--edge);
+    border-radius: 6px;
+}
+
+.project-card__actions {
+    display: flex;
+    gap: 0.65rem;
+    padding-top: 1rem;
+}
+
+.project-card__btn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.4rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.project-card__btn--primary {
+    color: #fff;
+    background: var(--text);
+}
+
+.project-card__btn--primary:hover {
+    opacity: 0.9;
+}
+
+.project-card__btn--ghost {
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid var(--edge);
+}
+
+.project-card__btn--ghost:hover {
+    background: #fff;
+}
+
+/* ==========================================================================
+   7. TECNOLOGIAS (CAROUSEL RESPONSIVO)
+   ========================================================================== */
+.tecnologias-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.tecnologs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.tech-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tec {
+    width: 72px;
+    height: 72px;
+    background: var(--surface-strong);
+    border-radius: 16px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--edge);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tec img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.tech-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+.tech-card:hover .tec {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+/* ==========================================================================
+   8. CONTATO
+   ========================================================================== */
+.contato-section {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.contato-lead {
+    text-align: center;
+    color: var(--text-soft);
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+}
+
+.formulario-rodape {
+    border: 1px solid var(--edge);
+    border-radius: 16px;
+    padding: 2rem;
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+}
+
+.formulario-rodape form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.grupo-input label {
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.grupo-input input,
+.grupo-input textarea {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--edge);
+    background: #fff;
+    width: 100%;
+}
+
+.formulario-rodape button[type="submit"] {
+    align-self: flex-start;
+    padding: 0.75rem 2rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: 8px;
+    background: var(--text);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.formulario-rodape button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ==========================================================================
+   9. MEDIA QUERIES (RESPONSIVIDADE COMPLETA)
+   ========================================================================== */
+@media (max-width: 960px) {
+    .main {
+        flex-direction: column-reverse; /* Foto vai para cima no mobile, mantendo leitura natural */
+        text-align: center;
+        align-items: center;
+        padding-top: 7rem;
+    }
+
+    .main-cabeca {
+        align-items: center;
+        text-align: center;
+    }
+
+    .cta-row {
+        justify-content: center;
+    }
+
+    .main-visual {
+        width: min(16rem, 60vw);
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-nav__menu {
+        display: none; /* Ideal implementar menu hamburguer futuramente via JS */
+    }
+    
+    .tecnologs {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 1rem;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .sobre-mim {
+        padding: 1.5rem;
+        text-align: left;
+    }
+}
+
 @media (max-width: 430px) {
-    .section-title {
-        margin-bottom: 1.25rem;
-        font-size: 1.75rem;
+    .cta-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .btn-cv {
+        width: 100%;
+    }
+
+    .project-card__actions {
+        flex-direction: column;
+    }
+    
+    .formulario-rodape button[type="submit"] {
+        width: 100%;
     }
 }
