@@ -398,11 +398,66 @@ a {
     padding: 4rem 2rem;
 }
 
+/* Wrapper do Carrossel com Botões */
+.projects-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    width: 100%;
+}
+
 .projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+    display: flex;
     gap: 1.75rem;
-    align-items: stretch;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 0.5rem 0 1.5rem;
+    scrollbar-width: none;
+    flex: 1;
+    /* Permite que o container cresça conforme o espaço disponível */
+    min-width: 0;
+}
+
+.projects-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Botões de Navegação do Carrossel */
+.carousel-btn {
+    position: relative;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1.5px solid var(--edge);
+    background: var(--surface-strong);
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.carousel-btn:hover {
+    background: var(--text);
+    color: var(--surface-strong);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.carousel-btn:active {
+    transform: translateY(0);
+}
+
+.carousel-btn svg {
+    width: 20px;
+    height: 20px;
 }
 
 .project-card {
@@ -414,6 +469,11 @@ a {
     background: var(--surface);
     box-shadow: var(--shadow-sm);
     transition: transform 0.28s ease, box-shadow 0.28s ease;
+    /* Propriedades essenciais para o carrossel */
+    flex-shrink: 0;
+    width: clamp(280px, 100%, 380px);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 .project-card:hover {
@@ -711,5 +771,28 @@ a {
     
     .formulario-rodape button[type="submit"] {
         width: 100%;
+    }
+
+    /* Carrossel responsivo para mobile */
+    .projects-wrapper {
+        gap: 0.75rem;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .carousel-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .project-card {
+        width: clamp(240px, 100%, 320px);
+    }
+
+    .projects-container {
+        gap: 1.25rem;
     }
 }
