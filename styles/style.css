@@ -1,10 +1,10 @@
 /* ==========================================================================
    Tokens
    ========================================================================== */
-:root{--bg:#efeae0;--bg2:#e4ded0;--ink:#17150f;--mute:#575245;--line:rgba(23,21,15,.15);--acc:#c23a14;--card:#f6f2e9;--tile:#f3efe6;--ease:cubic-bezier(.22,1,.36,1);
+:root{--bg:#efeae0;--bg2:#e4ded0;--ink:#17150f;--mute:#575245;--line:rgba(23,21,15,.15);--acc:#4169e1;--card:#f6f2e9;--tile:#f3efe6;--ease:cubic-bezier(.22,1,.36,1);
 --f-d:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;--f-b:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;--f-m:"JetBrains Mono",ui-monospace,Consolas,monospace;
 --pad:clamp(1.25rem,4vw,2rem);color-scheme:light}
-[data-theme=dark]{--bg:#13120e;--bg2:#1c1b16;--ink:#ece7da;--mute:#a8a291;--line:rgba(236,231,218,.15);--acc:#ff7448;--card:#1a1914;color-scheme:dark}
+[data-theme=dark]{--bg:#13120e;--bg2:#1c1b16;--ink:#ece7da;--mute:#a8a291;--line:rgba(236,231,218,.15);--acc:#4169e1;--card:#1a1914;color-scheme:dark}
 
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:5rem}
